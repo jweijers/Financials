@@ -45,38 +45,38 @@
     <foreignKeys xmi:uuid="mmuuid:4aaec1ee-7a50-431d-a318-3a2c1f798eeb" name="FK_Acctholdings_AcctID" nameInSource="`FK_Acctholdings_AcctID`" foreignKeyMultiplicity="UNSPECIFIED" primaryKeyMultiplicity="UNSPECIFIED" columns="mmuuid/68390290-cb76-46c7-b77a-ef36911a6fda" uniqueKey="mmuuid/71162d64-319e-40d7-8327-4e34e4388086"/>
     <primaryKey xmi:uuid="mmuuid:4f5fa026-0b96-4820-9ee8-e0262d773cd7" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/3766fcaf-6a31-4694-90ac-ede406a1f57f"/>
   </relational:BaseTable>
-  <relational:BaseTable xmi:uuid="mmuuid:560ffebc-5006-46ec-8681-c6b20483af84" name="customer" nameInSource="`eucustomers`.`customer`" supportsUpdate="false">
-    <columns xmi:uuid="mmuuid:40157803-6c7b-4c39-b6ab-b201497e8adb" name="CustomerID" nameInSource="`CustomerID`" nativeType="VARCHAR" length="12" nullable="NO_NULLS" updateable="false" uniqueKeys="mmuuid/c05116bb-669b-4371-b137-9693ae144245">
+  <relational:BaseTable xmi:uuid="mmuuid:560ffebc-5006-46ec-8681-c6b20483af84" name="customer" nameInSource="`eucustomers`.`customer`">
+    <columns xmi:uuid="mmuuid:40157803-6c7b-4c39-b6ab-b201497e8adb" name="CustomerID" nameInSource="`CustomerID`" nativeType="VARCHAR" length="12" nullable="NO_NULLS" uniqueKeys="mmuuid/c05116bb-669b-4371-b137-9693ae144245">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:e7a5203d-c575-4af7-be80-31d2c8109e1c" name="FIRSTNAME" nameInSource="`FIRSTNAME`" nativeType="VARCHAR" length="25" nullable="NO_NULLS" updateable="false">
+    <columns xmi:uuid="mmuuid:e7a5203d-c575-4af7-be80-31d2c8109e1c" name="FIRSTNAME" nameInSource="`FIRSTNAME`" nativeType="VARCHAR" length="25" nullable="NO_NULLS">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:a7286920-d5ee-440e-8f4a-9bcfb7b08c36" name="LASTNAME" nameInSource="`LASTNAME`" nativeType="VARCHAR" length="25" nullable="NO_NULLS" updateable="false">
+    <columns xmi:uuid="mmuuid:a7286920-d5ee-440e-8f4a-9bcfb7b08c36" name="LASTNAME" nameInSource="`LASTNAME`" nativeType="VARCHAR" length="25" nullable="NO_NULLS">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:6cc26b0c-6ad4-4365-9b51-c914ee10fa0c" name="MIDDLENAME" nameInSource="`MIDDLENAME`" nativeType="VARCHAR" length="15" updateable="false">
+    <columns xmi:uuid="mmuuid:6cc26b0c-6ad4-4365-9b51-c914ee10fa0c" name="MIDDLENAME" nameInSource="`MIDDLENAME`" nativeType="VARCHAR" length="15">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:bb35a6c0-7db7-40d1-a118-0b0ce38dd4a8" name="StreetAddress" nameInSource="`StreetAddress`" nativeType="VARCHAR" length="50" nullable="NO_NULLS" updateable="false">
+    <columns xmi:uuid="mmuuid:bb35a6c0-7db7-40d1-a118-0b0ce38dd4a8" name="StreetAddress" nameInSource="`StreetAddress`" nativeType="VARCHAR" length="50" nullable="NO_NULLS">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:6d005cf5-13fe-41a5-ae55-4757fe87b882" name="StreetAddress2" nameInSource="`StreetAddress2`" nativeType="VARCHAR" length="50" updateable="false">
+    <columns xmi:uuid="mmuuid:6d005cf5-13fe-41a5-ae55-4757fe87b882" name="StreetAddress2" nameInSource="`StreetAddress2`" nativeType="VARCHAR" length="50">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:66daddd4-d1c4-494c-b87b-3b8f65bbc359" name="CITY" nameInSource="`CITY`" nativeType="VARCHAR" length="25" nullable="NO_NULLS" updateable="false">
+    <columns xmi:uuid="mmuuid:66daddd4-d1c4-494c-b87b-3b8f65bbc359" name="CITY" nameInSource="`CITY`" nativeType="VARCHAR" length="25" nullable="NO_NULLS">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:7ebec53d-a9e1-409e-a082-3ccb44e28137" name="StateProvince" nameInSource="`StateProvince`" nativeType="VARCHAR" length="25" updateable="false">
+    <columns xmi:uuid="mmuuid:7ebec53d-a9e1-409e-a082-3ccb44e28137" name="StateProvince" nameInSource="`StateProvince`" nativeType="VARCHAR" length="25">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:cd1ffa6f-1f4c-4bf1-a2a7-4ae7727a00b1" name="POSTALCODE" nameInSource="`POSTALCODE`" nativeType="VARCHAR" length="15" nullable="NO_NULLS" updateable="false">
+    <columns xmi:uuid="mmuuid:cd1ffa6f-1f4c-4bf1-a2a7-4ae7727a00b1" name="POSTALCODE" nameInSource="`POSTALCODE`" nativeType="VARCHAR" length="15" nullable="NO_NULLS">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:f8af32f5-fb80-4f4d-9109-7cdee7c35e93" name="COUNTRY" nameInSource="`COUNTRY`" nativeType="VARCHAR" length="10" updateable="false">
+    <columns xmi:uuid="mmuuid:f8af32f5-fb80-4f4d-9109-7cdee7c35e93" name="COUNTRY" nameInSource="`COUNTRY`" nativeType="VARCHAR" length="10">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
-    <columns xmi:uuid="mmuuid:41dae2df-e631-4ee8-a54b-0c7346339c9e" name="PhoneNumber" nameInSource="`PhoneNumber`" nativeType="VARCHAR" length="30" updateable="false">
+    <columns xmi:uuid="mmuuid:41dae2df-e631-4ee8-a54b-0c7346339c9e" name="PhoneNumber" nameInSource="`PhoneNumber`" nativeType="VARCHAR" length="30">
       <type href="http://www.w3.org/2001/XMLSchema#string"/>
     </columns>
     <primaryKey xmi:uuid="mmuuid:c05116bb-669b-4371-b137-9693ae144245" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/40157803-6c7b-4c39-b6ab-b201497e8adb" foreignKeys="mmuuid/0ebce53a-7735-48db-8b88-85eef2bfce19"/>

@@ -48,38 +48,38 @@
     <foreignKeys xmi:uuid="mmuuid:ca33f2f3-dfec-4a77-85ac-cf4e93bf3d67" name="FK_Acctholdings_AcctID" nameInSource="`FK_Acctholdings_AcctID`" foreignKeyMultiplicity="UNSPECIFIED" primaryKeyMultiplicity="UNSPECIFIED" columns="mmuuid/a48723ca-b158-46e6-8bad-9920f39caed7" uniqueKey="mmuuid/d37995d5-8b8e-42b9-a929-5fb860420562"/>
     <primaryKey xmi:uuid="mmuuid:acff6cb1-bde6-4ed6-8e89-69a7a473761f" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/00931aad-8bc3-4398-8811-97adc3f56bf3"/>
   </relational:BaseTable>
-  <relational:BaseTable xmi:uuid="mmuuid:a582d51c-4104-4bee-9090-782d8743913a" name="customer" nameInSource="`eucustomers`.`customer`" supportsUpdate="false">
-    <columns xmi:uuid="mmuuid:f2094797-4da8-4142-a578-e4c5b69d7b1b" name="CustomerID" nameInSource="`CustomerID`" nativeType="VARCHAR" length="12" nullable="NO_NULLS" updateable="false" uniqueKeys="mmuuid/2f57af71-847e-46ce-8e98-8e07d933c322">
+  <relational:BaseTable xmi:uuid="mmuuid:a582d51c-4104-4bee-9090-782d8743913a" name="customer" nameInSource="`eucustomers`.`customer`">
+    <columns xmi:uuid="mmuuid:f2094797-4da8-4142-a578-e4c5b69d7b1b" name="CustomerID" nameInSource="`CustomerID`" nativeType="VARCHAR" length="12" nullable="NO_NULLS" uniqueKeys="mmuuid/2f57af71-847e-46ce-8e98-8e07d933c322">
       <type href="../Schemas/DataDictionary.xsd#//CustomerID;XSDSimpleTypeDefinition=34"/>
     </columns>
-    <columns xmi:uuid="mmuuid:9602fd79-c18c-41f7-a8cd-1675e0f312ba" name="FIRSTNAME" nameInSource="`FIRSTNAME`" nativeType="VARCHAR" length="25" nullable="NO_NULLS" updateable="false">
+    <columns xmi:uuid="mmuuid:9602fd79-c18c-41f7-a8cd-1675e0f312ba" name="FIRSTNAME" nameInSource="`FIRSTNAME`" nativeType="VARCHAR" length="25" nullable="NO_NULLS">
       <type href="../Schemas/DataDictionary.xsd#//FirstName;XSDSimpleTypeDefinition=35"/>
     </columns>
-    <columns xmi:uuid="mmuuid:c47d7414-e22a-45ba-a587-4e9ec87f250e" name="LASTNAME" nameInSource="`LASTNAME`" nativeType="VARCHAR" length="25" nullable="NO_NULLS" updateable="false">
+    <columns xmi:uuid="mmuuid:c47d7414-e22a-45ba-a587-4e9ec87f250e" name="LASTNAME" nameInSource="`LASTNAME`" nativeType="VARCHAR" length="25" nullable="NO_NULLS">
       <type href="../Schemas/DataDictionary.xsd#//LastName;XSDSimpleTypeDefinition=36"/>
     </columns>
-    <columns xmi:uuid="mmuuid:3991f816-e2df-445f-bfa0-c57f1ad459b8" name="MIDDLENAME" nameInSource="`MIDDLENAME`" nativeType="VARCHAR" length="15" updateable="false">
+    <columns xmi:uuid="mmuuid:3991f816-e2df-445f-bfa0-c57f1ad459b8" name="MIDDLENAME" nameInSource="`MIDDLENAME`" nativeType="VARCHAR" length="15">
       <type href="../Schemas/DataDictionary.xsd#//MiddleInitial;XSDSimpleTypeDefinition"/>
     </columns>
-    <columns xmi:uuid="mmuuid:455e781d-0684-42b4-8169-2de45f6dc766" name="StreetAddress" nameInSource="`StreetAddress`" nativeType="VARCHAR" length="50" nullable="NO_NULLS" updateable="false">
+    <columns xmi:uuid="mmuuid:455e781d-0684-42b4-8169-2de45f6dc766" name="StreetAddress" nameInSource="`StreetAddress`" nativeType="VARCHAR" length="50" nullable="NO_NULLS">
       <type href="../Schemas/DataDictionary.xsd#//StreetAddress;XSDSimpleTypeDefinition=37"/>
     </columns>
-    <columns xmi:uuid="mmuuid:5c005bef-24dc-4263-aa33-f7d1bd457778" name="StreetAddress2" nameInSource="`StreetAddress2`" nativeType="VARCHAR" length="50" updateable="false">
+    <columns xmi:uuid="mmuuid:5c005bef-24dc-4263-aa33-f7d1bd457778" name="StreetAddress2" nameInSource="`StreetAddress2`" nativeType="VARCHAR" length="50">
       <type href="../Schemas/DataDictionary.xsd#//StreetAddress;XSDSimpleTypeDefinition=37"/>
     </columns>
-    <columns xmi:uuid="mmuuid:a6e02ba8-8adb-4530-abda-b18f72654c7b" name="CITY" nameInSource="`CITY`" nativeType="VARCHAR" length="25" nullable="NO_NULLS" updateable="false">
+    <columns xmi:uuid="mmuuid:a6e02ba8-8adb-4530-abda-b18f72654c7b" name="CITY" nameInSource="`CITY`" nativeType="VARCHAR" length="25" nullable="NO_NULLS">
       <type href="../Schemas/DataDictionary.xsd#//City;XSDSimpleTypeDefinition=1"/>
     </columns>
-    <columns xmi:uuid="mmuuid:7e343b00-991e-4f14-b3c0-0c2d686b2005" name="StateProvince" nameInSource="`StateProvince`" nativeType="VARCHAR" length="25" updateable="false">
+    <columns xmi:uuid="mmuuid:7e343b00-991e-4f14-b3c0-0c2d686b2005" name="StateProvince" nameInSource="`StateProvince`" nativeType="VARCHAR" length="25">
       <type href="../Schemas/DataDictionary.xsd#//StateProvince;XSDSimpleTypeDefinition=2"/>
     </columns>
-    <columns xmi:uuid="mmuuid:ac57dcc8-1045-4f90-8bed-f1520a39e967" name="POSTALCODE" nameInSource="`POSTALCODE`" nativeType="VARCHAR" length="15" nullable="NO_NULLS" updateable="false">
+    <columns xmi:uuid="mmuuid:ac57dcc8-1045-4f90-8bed-f1520a39e967" name="POSTALCODE" nameInSource="`POSTALCODE`" nativeType="VARCHAR" length="15" nullable="NO_NULLS">
       <type href="../Schemas/DataDictionary.xsd#//PostalCode;XSDSimpleTypeDefinition=3"/>
     </columns>
-    <columns xmi:uuid="mmuuid:a540f2fe-ba4a-46de-8a69-99e4bc170cfc" name="COUNTRY" nameInSource="`COUNTRY`" nativeType="VARCHAR" length="10" updateable="false">
+    <columns xmi:uuid="mmuuid:a540f2fe-ba4a-46de-8a69-99e4bc170cfc" name="COUNTRY" nameInSource="`COUNTRY`" nativeType="VARCHAR" length="10">
       <type href="../Schemas/DataDictionary.xsd#//Country;XSDSimpleTypeDefinition=4"/>
     </columns>
-    <columns xmi:uuid="mmuuid:c1e174f8-dfd3-4621-93d3-9e07609f8c4b" name="PhoneNumber" nameInSource="`PhoneNumber`" nativeType="VARCHAR" length="30" updateable="false">
+    <columns xmi:uuid="mmuuid:c1e174f8-dfd3-4621-93d3-9e07609f8c4b" name="PhoneNumber" nameInSource="`PhoneNumber`" nativeType="VARCHAR" length="30">
       <type href="../Schemas/DataDictionary.xsd#//PhoneNumber;XSDSimpleTypeDefinition=5"/>
     </columns>
     <primaryKey xmi:uuid="mmuuid:2f57af71-847e-46ce-8e98-8e07d933c322" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/f2094797-4da8-4142-a578-e4c5b69d7b1b" foreignKeys="mmuuid/abe5dbd3-3e52-4a56-ad19-8c520aae653c"/>
@@ -1807,8 +1807,8 @@
       <inputs href="../VirtualBaseLayer/US_Customers_VBL.xmi#mmuuid/b1cb44ab-1f97-40c9-a355-c765b4441418"/>
     </transformationMappings>
     <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:8a9b26b2-5540-4c5d-a210-534e63ba04e1" outputs="mmuuid/a582d51c-4104-4bee-9090-782d8743913a" target="mmuuid/a582d51c-4104-4bee-9090-782d8743913a">
-      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:b51f1e69-76e9-4be6-bfe0-016f94557eeb">
-        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:240386fa-aebd-465a-9614-b8d37c5a8f68" selectSql="SELECT US_Customers_VBL.customer.SSN AS CustomerID, US_Customers_VBL.customer.FIRSTNAME, US_Customers_VBL.customer.LASTNAME, US_Customers_VBL.customer.MIDDLEInitial AS MIDDLENAME, US_Customers_VBL.customer.StreetAddress1 AS StreetAddress, US_Customers_VBL.customer.AptNumber AS StreetAddress2, US_Customers_VBL.customer.CITY, US_Customers_VBL.customer.State AS StateProvince, US_Customers_VBL.customer.ZipCode AS POSTALCODE, 'USA' AS COUNTRY, US_Customers_VBL.customer.Phone AS PhoneNumber FROM US_Customers_VBL.customer"/>
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:b51f1e69-76e9-4be6-bfe0-016f94557eeb" insertSqlDefault="false">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:240386fa-aebd-465a-9614-b8d37c5a8f68" selectSql="SELECT US_Customers_VBL.customer.SSN AS CustomerID, US_Customers_VBL.customer.FIRSTNAME, US_Customers_VBL.customer.LASTNAME, US_Customers_VBL.customer.MIDDLEInitial AS MIDDLENAME, US_Customers_VBL.customer.StreetAddress1 AS StreetAddress, US_Customers_VBL.customer.AptNumber AS StreetAddress2, US_Customers_VBL.customer.CITY, US_Customers_VBL.customer.State AS StateProvince, US_Customers_VBL.customer.ZipCode AS POSTALCODE, 'USA' AS COUNTRY, US_Customers_VBL.customer.Phone AS PhoneNumber FROM US_Customers_VBL.customer" insertSql="FOR EACH ROW&#xa;BEGIN ATOMIC&#xa;&#x9;IF(&quot;NEW&quot;.COUNTRY &lt;> 'USA')&#xa;&#x9;BEGIN&#xa;&#x9;&#x9;RAISE SQLEXCEPTION 'Country must be USA';&#xa;&#x9;END&#xa;&#x9;ELSE&#xa;&#x9;BEGIN&#xa;&#x9;&#x9;INSERT INTO US_Customers_VBL.customer (US_Customers_VBL.customer.SSN, US_Customers_VBL.customer.FIRSTNAME, US_Customers_VBL.customer.LASTNAME, US_Customers_VBL.customer.MIDDLEInitial, US_Customers_VBL.customer.StreetAddress1, US_Customers_VBL.customer.AptNumber, US_Customers_VBL.customer.CITY, US_Customers_VBL.customer.State, US_Customers_VBL.customer.ZipCode, US_Customers_VBL.customer.Phone) VALUES (&quot;NEW&quot;.CustomerID, &quot;NEW&quot;.FIRSTNAME, &quot;NEW&quot;.LASTNAME, &quot;NEW&quot;.MIDDLENAME, &quot;NEW&quot;.StreetAddress, &quot;NEW&quot;.StreetAddress2, &quot;NEW&quot;.CITY, &quot;NEW&quot;.StateProvince, &quot;NEW&quot;.POSTALCODE, &quot;NEW&quot;.PhoneNumber);&#xa;&#x9;END&#xa;END" insertSqlDefault="false"/>
         <aliases xmi:uuid="mmuuid:9cb5b780-db0d-4db9-9fff-e08d229181b7" alias="customer">
           <aliasedObject href="../VirtualBaseLayer/US_Customers_VBL.xmi#mmuuid/16c06400-d50e-4131-961a-fcb43eb1b8e8"/>
         </aliases>

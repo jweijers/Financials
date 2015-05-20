@@ -6,6 +6,7 @@
     <modelImports xmi:uuid="mmuuid:b73a4acc-d3c8-4e7c-8db2-5adce87fb4c8" name="EU_Customers_VBL" modelLocation="../VirtualBaseLayer/EU_Customers_VBL.xmi" uuid="mmuuid:a7e9f1a6-6131-44b3-9e21-3c5b36c3eefb" modelType="VIRTUAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
     <modelImports xmi:uuid="mmuuid:47fc5b8a-cc09-493c-8888-358858eef746" name="EU_Customers" modelLocation="../DataSources/EU_Customers.xmi" uuid="mmuuid:6315b589-a2b0-4ac8-a63c-e5b5795bde76" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
     <modelImports xmi:uuid="mmuuid:bc363447-eb64-4644-b082-6a3872f76f67" name="US_Customers_DDC" modelLocation="../EnterpriseDataLayer/US_Customers_DDC.xmi" uuid="mmuuid:c185a033-a5c1-4488-a087-f9b153512ff5" modelType="VIRTUAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
+    <modelImports xmi:uuid="mmuuid:2ca574a9-251d-439f-abd6-b1f2575f1251" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
   </mmcore:ModelAnnotation>
   <relational:BaseTable xmi:uuid="mmuuid:12d3e0aa-9928-4620-a5a4-31b93db6ae87" name="account" nameInSource="`eucustomers`.`account`" supportsUpdate="false">
     <columns xmi:uuid="mmuuid:6201059a-3217-4009-9352-648ffb254e42" name="AccountId" nameInSource="`AccountId`" nativeType="DECIMAL" fixedLength="true" precision="18" nullable="NO_NULLS" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/9e699ff5-5835-4773-ba6b-c32de11e193e">
@@ -1860,12 +1861,30 @@
       <inputs href="../EnterpriseDataLayer/EU_Customers_DDC.xmi#mmuuid/2e5edb95-84ba-4557-9415-49ee6af6bbb0"/>
       <inputs href="../EnterpriseDataLayer/US_Customers_DDC.xmi#mmuuid/a582d51c-4104-4bee-9090-782d8743913a"/>
     </transformationMappings>
+    <transformationMappings xsi:type="transformation:SqlTransformationMappingRoot" xmi:uuid="mmuuid:b0dce559-45a0-4cfc-8d8d-b4d1eaf01ac5" inputs="mmuuid/64d14884-7cc5-469c-a29e-6ff5788d2ef6" outputs="mmuuid/6fd992a8-6b09-4bf1-9a25-20d05d451527" target="mmuuid/6fd992a8-6b09-4bf1-9a25-20d05d451527">
+      <helper xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:0ac40909-afef-4792-88e3-5a917bd9e389">
+        <nested xsi:type="transformation:SqlTransformation" xmi:uuid="mmuuid:6ae36da3-e428-48b3-85a3-e2300a920f4d" selectSql="BEGIN&#xa;&#x9;DECLARE bigint VARIABLES.total = 0;&#xa;&#x9;LOOP ON (SELECT c.COUNTRY, COUNT(*) AS nr FROM AllCustomers.customer AS c GROUP BY c.COUNTRY) AS cntrs&#xa;&#x9;BEGIN&#xa;&#x9;&#x9;IF(cntrs.COUNTRY = AllCustomers.test.countryCode)&#xa;&#x9;&#x9;BEGIN&#xa;&#x9;&#x9;&#x9;VARIABLES.total = cntrs.nr;&#xa;&#x9;&#x9;END&#xa;&#x9;END&#xa;&#x9;SELECT VARIABLES.total;&#xa;END"/>
+        <aliases xmi:uuid="mmuuid:5c95ad88-c36f-4865-8a24-1061ea921c4b" alias="c" aliasedObject="mmuuid/64d14884-7cc5-469c-a29e-6ff5788d2ef6"/>
+      </helper>
+      <nested xsi:type="transformation:TransformationMapping" xmi:uuid="mmuuid:6c2a6e04-3fe4-4f26-bc29-deaf0f5f7644" outputs="mmuuid/bc302bbe-0fe1-49b0-b68c-26d326d43068"/>
+    </transformationMappings>
   </transformation:TransformationContainer>
   <diagram:DiagramContainer xmi:uuid="mmuuid:9ffc5b4e-4a5b-41eb-a7bf-c4f9d03c9c79">
     <diagram xmi:uuid="mmuuid:ba2b510c-1f79-4f23-9d62-526d68e95dc6" type="packageDiagramType" target="mmuuid/7f9f602a-19d4-42f9-9ff7-eb9d02c548e9">
       <diagramEntity xmi:uuid="mmuuid:a9f0dd9f-6c25-45de-a747-50609574f4ec" modelObject="mmuuid/12d3e0aa-9928-4620-a5a4-31b93db6ae87" xPosition="30" yPosition="195"/>
       <diagramEntity xmi:uuid="mmuuid:3a5ad6eb-1001-4556-926f-161b8c44e69c" modelObject="mmuuid/4178e2a9-f4ac-49b2-a388-48e37e85c7e3" xPosition="363" yPosition="30"/>
       <diagramEntity xmi:uuid="mmuuid:bd58b595-3513-4001-8b05-6d2dbf8654e1" modelObject="mmuuid/64d14884-7cc5-469c-a29e-6ff5788d2ef6" xPosition="358" yPosition="333"/>
+      <diagramEntity xmi:uuid="mmuuid:dae1d14b-766c-4440-bcc8-fb423d6ebfa7" modelObject="mmuuid/6fd992a8-6b09-4bf1-9a25-20d05d451527"/>
     </diagram>
   </diagram:DiagramContainer>
+  <relational:Procedure xmi:uuid="mmuuid:6fd992a8-6b09-4bf1-9a25-20d05d451527" name="test" nameInSource="test">
+    <parameters xmi:uuid="mmuuid:e5dd02dc-70c8-4524-9f82-576bdf02ab39" name="countryCode" length="4000" nullable="NULLABLE_UNKNOWN" radix="0">
+      <type href="http://www.w3.org/2001/XMLSchema#string"/>
+    </parameters>
+    <result xmi:uuid="mmuuid:dae76f85-d8e0-41ec-a5db-096cf3644979" name="NewProcedureResult">
+      <columns xmi:uuid="mmuuid:bc302bbe-0fe1-49b0-b68c-26d326d43068" name="total">
+        <type href="http://www.w3.org/2001/XMLSchema#long"/>
+      </columns>
+    </result>
+  </relational:Procedure>
 </xmi:XMI>

@@ -7,6 +7,7 @@
     <modelImports xmi:uuid="mmuuid:47fc5b8a-cc09-493c-8888-358858eef746" name="EU_Customers" modelLocation="../DataSources/EU_Customers.xmi" uuid="mmuuid:6315b589-a2b0-4ac8-a63c-e5b5795bde76" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
     <modelImports xmi:uuid="mmuuid:bc363447-eb64-4644-b082-6a3872f76f67" name="US_Customers_DDC" modelLocation="../EnterpriseDataLayer/US_Customers_DDC.xmi" uuid="mmuuid:c185a033-a5c1-4488-a087-f9b153512ff5" modelType="VIRTUAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
     <modelImports xmi:uuid="mmuuid:2ca574a9-251d-439f-abd6-b1f2575f1251" name="XMLSchema" modelLocation="http://www.w3.org/2001/XMLSchema" modelType="TYPE" primaryMetamodelUri="http://www.eclipse.org/xsd/2002/XSD"/>
+    <modelImports xmi:uuid="mmuuid:5386ade2-bcbb-4773-9e8e-935d0b74637d" name="MatAllCustomers" modelLocation="MatAllCustomers.xmi" uuid="mmuuid:6e880e8a-e343-4a0e-9dd2-73c9f828e689" modelType="PHYSICAL" primaryMetamodelUri="http://www.metamatrix.com/metamodels/Relational"/>
   </mmcore:ModelAnnotation>
   <relational:BaseTable xmi:uuid="mmuuid:12d3e0aa-9928-4620-a5a4-31b93db6ae87" name="account" nameInSource="`eucustomers`.`account`" supportsUpdate="false">
     <columns xmi:uuid="mmuuid:6201059a-3217-4009-9352-648ffb254e42" name="AccountId" nameInSource="`AccountId`" nativeType="DECIMAL" fixedLength="true" precision="18" nullable="NO_NULLS" updateable="false" caseSensitive="false" searchability="ALL_EXCEPT_LIKE" uniqueKeys="mmuuid/9e699ff5-5835-4773-ba6b-c32de11e193e">
@@ -49,7 +50,7 @@
     <foreignKeys xmi:uuid="mmuuid:0dd10a48-79c6-45af-b307-d8af61f8cfa7" name="FK_Acctholdings_AcctID" nameInSource="`FK_Acctholdings_AcctID`" foreignKeyMultiplicity="UNSPECIFIED" primaryKeyMultiplicity="UNSPECIFIED" columns="mmuuid/9a539409-501a-465b-bb89-c6ecb500047a" uniqueKey="mmuuid/9e699ff5-5835-4773-ba6b-c32de11e193e"/>
     <primaryKey xmi:uuid="mmuuid:fcf9a851-f1af-4bdf-ad5a-5ee490805cad" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/3e14ad6f-ac89-46c7-969c-17eb18c465d6"/>
   </relational:BaseTable>
-  <relational:BaseTable xmi:uuid="mmuuid:64d14884-7cc5-469c-a29e-6ff5788d2ef6" name="customer" nameInSource="`eucustomers`.`customer`">
+  <relational:BaseTable xmi:uuid="mmuuid:64d14884-7cc5-469c-a29e-6ff5788d2ef6" name="customer" nameInSource="`eucustomers`.`customer`" materialized="true">
     <columns xmi:uuid="mmuuid:fdd33f8b-bb90-4f9a-8457-79e10f812657" name="CustomerID" nameInSource="`CustomerID`" nativeType="VARCHAR" length="12" nullable="NO_NULLS" uniqueKeys="mmuuid/3aa7c697-ccb5-4362-8327-9e365d30ec9d">
       <type href="../Schemas/DataDictionary.xsd#//CustomerID;XSDSimpleTypeDefinition=34"/>
     </columns>
@@ -83,6 +84,7 @@
     <columns xmi:uuid="mmuuid:b14aa9d6-dbf5-49c9-92c1-ad374d0c9f8f" name="PhoneNumber" nameInSource="`PhoneNumber`" nativeType="VARCHAR" length="30">
       <type href="../Schemas/DataDictionary.xsd#//PhoneNumber;XSDSimpleTypeDefinition=5"/>
     </columns>
+    <materializedTable xsi:type="relational:BaseTable" href="MatAllCustomers.xmi#mmuuid/a42cc05d-98a0-4ca0-a2f4-dba3ed97c996"/>
     <primaryKey xmi:uuid="mmuuid:3aa7c697-ccb5-4362-8327-9e365d30ec9d" name="PRIMARY" nameInSource="`PRIMARY`" columns="mmuuid/fdd33f8b-bb90-4f9a-8457-79e10f812657" foreignKeys="mmuuid/f49ae947-479d-408c-8094-f3c60f36bebe"/>
   </relational:BaseTable>
   <mmcore:AnnotationContainer xmi:uuid="mmuuid:7529d72d-e8bb-4ebd-8a93-9c0193a9e493">
